@@ -1,0 +1,25 @@
+<div class="container">
+
+    <div class="row">
+
+        <h1> Update produit </h1>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-6 mx-auto">
+
+            <input type="text" [(ngModel)]="product.title" class="form-control m-2" placeholder="title">
+            <input type="text" [(ngModel)]="product.description" class="form-control m-2" placeholder="description">
+            <input type="text" [(ngModel)]="product.price" class="form-control m-2" placeholder="price">
+            <input type="text" [(ngModel)]="product.image" class="form-control m-2" placeholder="image">
+            <button class="btn btn-success m-2" (click)="save()">Save</button>
+
+        </div>
+
+    </div>
+
+
+
+</div>

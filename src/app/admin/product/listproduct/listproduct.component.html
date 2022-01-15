@@ -1,0 +1,49 @@
+<div class="container mt-5">
+
+
+    <div class="row " style="display: flex;justify-content: space-between;">
+
+        <h1 class="col-6">Liste des produits</h1>
+
+        <button class="btn btn-outline-primary col-2" [routerLink]="['/admin/ajoutproduit']" >Ajout</button>
+
+    </div>
+
+
+    <div class="row mt-5">
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <td>image</td>
+                    <td>title</td>
+                    <td>description</td>
+                    <td>price</td>
+                    <td>options</td>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                <tr *ngFor="let item of products">
+                    <td> 
+                        <img [src]="item.image" style="width: 50px;" alt="">
+                    </td>
+                    <td> {{item.title}} </td>
+                    <td> {{item.description}} </td>
+                    <td> {{item.price}} </td>
+                    <td>
+                        <button class="btn btn-info" [routerLink]="['/admin/detailproduct' , item._id]" >update</button>
+                        <button class="btn btn-danger"  (click)="delete(item._id)">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+
+    </div>
+
+
+</div>
